@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif
+}
+
+
+body {
+    min-height: 100vh;
+    background-image: linear-gradient(to right bottom, #051937, #002667, #00309a, #0036cb, #2a33fb);
+    color: #fff;
+    overflow: hidden;
+}
+
+ 
+.container {
+    width: 30%;
+    margin: 0 auto;
+    margin-top: 5%;
+}
+
+.container h1 {
+    text-align: center;
+    font-size: 52px;
+}
+
+.container p {
+    text-align: center;
+    
+}
+
+.social-container{
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    display: none;
+}
+.social-container i{
+   color: #fff;
+   font-size: 40px;
+}
+
+
+.card {
+    border: 1px solid rgb(165, 163, 163, 0.3);
+    padding: 4rem 3rem;
+    margin-top: 1rem;
+    border-radius: 30px;
+    box-shadow: 10px 10px 14px 1px rgba(00,00,00,0.2);
+    background: #051937;
+    letter-spacing: 0.094em;
+}
+
+label {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    
+  }
+  
+input {
+    border: 1px solid #333;
+    border-radius: 50px;
+    color: #333;
+    font-size: 32px;
+    margin: 0 0 20px;
+    padding: .5rem 1rem;
+    width: 100%;
+    cursor:pointer;
+    text-align: center;
+}
+
+button {
+    width: 100%;
+    background: rgb(230, 163, 20);
+    border-radius: 50px;
+    color: #333;
+    font-size: 26px;
+    padding: 0.6rem;
+    outline: none;
+    border:none;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    transition: all .4s ease-in;
+    display: none;
+  }
+  
+button:hover {
+    background: rgb(31, 197, 9);
+    color: #fff;
+    cursor: pointer;
+}
+
+.alert.alert-danger {
+    padding: 0.8rem;
+    background-color: crimson;
+    margin: 0.8rem;
+    font-size: 14px;
+}
+
+
+@media only screen 
+and (min-device-width: 411px) 
+and (max-device-width: 823px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: portrait) {
+
+    .container {
+        width: 100% !important;
+      
+    }
+
+    .card {
+        margin-left: 5px !important;
+        margin-right: 5px !important;
+    }
+
+    .social-container{
+        width: 80% !important;
+       
+    }
+
+}
+
+@media only screen 
+and (max-device-width: 400px) 
+ {
+   
+    .container {
+        width: 100% !important;
+      
+    }
+
+    .card {
+        margin-left: 5px !important;
+        margin-right: 5px !important;
+    }
+
+    .social-container{
+        width: 40%;
+        margin: 0 auto;
+        text-align: center;
+        padding: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .social-container{
+        width: 80% !important;
+       
+    }
+ }
+  
