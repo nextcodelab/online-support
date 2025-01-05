@@ -4,18 +4,19 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif
+    font-family: 'Poppins', sans-serif;
 }
-
 
 body {
     min-height: 100vh;
     background-image: linear-gradient(to right bottom, #051937, #002667, #00309a, #0036cb, #2a33fb);
     color: #fff;
-    overflow: hidden;
+    overflow-y: auto; /* Enable vertical scrolling */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Ensure content starts at the top */
 }
 
- 
 .container {
     width: 30%;
     margin: 0 auto;
@@ -29,10 +30,9 @@ body {
 
 .container p {
     text-align: center;
-    
 }
 
-.social-container{
+.social-container {
     width: 40%;
     margin: 0 auto;
     text-align: center;
@@ -42,20 +42,25 @@ body {
     justify-content: space-between;
     display: none;
 }
-.social-container i{
-   color: #fff;
-   font-size: 40px;
-}
 
+.social-container i {
+    color: #fff;
+    font-size: 40px;
+}
 
 .card {
     border: 1px solid rgb(165, 163, 163, 0.3);
     padding: 4rem 3rem;
-    margin-top: 1rem;
+    margin-top: 10px;
     border-radius: 30px;
     box-shadow: 10px 10px 14px 1px rgba(00,00,00,0.2);
     background: #051937;
     letter-spacing: 0.094em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-height: auto; /* Control maximum height for the card */
+    overflow: auto; /* Allow scrolling within the card */
 }
 
 label {
@@ -64,9 +69,8 @@ label {
     font-weight: bold;
     margin-bottom: 10px;
     text-align: center;
-    
-  }
-  
+}
+
 input {
     border: 1px solid #333;
     border-radius: 50px;
@@ -75,7 +79,7 @@ input {
     margin: 0 0 20px;
     padding: .5rem 1rem;
     width: 100%;
-    cursor:pointer;
+    cursor: pointer;
     text-align: center;
 }
 
@@ -87,13 +91,13 @@ button {
     font-size: 26px;
     padding: 0.6rem;
     outline: none;
-    border:none;
+    border: none;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
     transition: all .4s ease-in;
     display: none;
-  }
-  
+}
+
 button:hover {
     background: rgb(31, 197, 9);
     color: #fff;
@@ -107,37 +111,28 @@ button:hover {
     font-size: 14px;
 }
 
-
-@media only screen 
-and (min-device-width: 411px) 
-and (max-device-width: 823px)
-and (-webkit-min-device-pixel-ratio: 2)
-and (orientation: portrait) {
-
-    .container {
-        width: 100% !important;
-      
-    }
-
-    .card {
-        margin-left: 5px !important;
-        margin-right: 5px !important;
-    }
-
-    .social-container{
-        width: 80% !important;
-       
-    }
-
+/* Styling the QR code to be responsive and prevent overflow */
+.gcash-qr {
+    max-width: 100%;
+    height: auto;
+    max-height: auto; /* Set max height for the QR code */
+    vertical-align: bottom;
+    margin-top: 20px;
+    border-radius: 5px; /* Adding corner radius */
 }
 
-@media only screen 
-and (max-device-width: 400px) 
- {
-   
+/* Container for QR code to handle alignment */
+.qr-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to the top of the container */
+    width: 100%;
+    overflow: hidden;
+}
+
+@media only screen and (max-device-width: 600px) {
     .container {
         width: 100% !important;
-      
     }
 
     .card {
@@ -145,19 +140,7 @@ and (max-device-width: 400px)
         margin-right: 5px !important;
     }
 
-    .social-container{
-        width: 40%;
-        margin: 0 auto;
-        text-align: center;
-        padding: 2rem;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    .social-container{
+    .social-container {
         width: 80% !important;
-       
     }
- }
-  
+}
